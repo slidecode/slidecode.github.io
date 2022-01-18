@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Redacted&family=Righteous&family=Titan+One&display=swap" rel="stylesheet">
+    <base target="_top">
+    <style>
+      body {
+        background-color: black;
+      }
+      .header {
+        height: 50px;
+        width: 100%;
+      }
+      .Main {
+        color: #fff8ee;
+        text-align: center;
+        font-family: 'Righteous', cursive;
+        width: 70%;
+        height: 1900px;
+        margin: auto;
+        border: 10px;
+        border-color: #fff8ee;
+        border-style: hidden hidden hidden solid;
+        padding: 8px 10px;
+        background-color: #453622;
+      }
+    </style>
+    <script>
+      function darkmode() {
+          document.getElementById('main').style.backgroundColor='#453622'
+          document.getElementById('main').style.color='#fff8ee'
+          document.getElementById('main').style.borderColor='#fff8ee'
+          document.body.style.backgroundColor = "black";
+      }
+      function lightmode() {
+          document.getElementById('main').style.backgroundColor='#ddddff'
+          document.getElementById('main').style.color='#000011'
+          document.getElementById('main').style.borderColor='#000011'
+          document.body.style.backgroundColor = "white";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="Main" id="main">
+      <h1>Science Stuffs</h1>
+      <h2>Geology</h2>
+      <button type="button" onclick="lightmode()">Color Mode</button>
+    </div>
+  </body>
