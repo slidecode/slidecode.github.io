@@ -34,7 +34,7 @@
           document.getElementById('main').style.backgroundColor='#170d00'
           document.getElementById('main').style.color='#fff8ee'
           document.getElementById('main').style.borderColor='#fff8ee'
-          document.getElementById('colormode').onClick='lightmode()'
+          document.getElementById('colormode').setAttribute( "onClick", "javascript: lightmode();" );
           document.body.style.backgroundColor = "black";
       }
       function lightmode() {
@@ -42,7 +42,7 @@
           document.getElementById('main').style.backgroundColor='#ddddff'
           document.getElementById('main').style.color='#000011'
           document.getElementById('main').style.borderColor='#000011'
-          document.getElementById('colormode').onClick='darkmode()'
+          document.getElementById('colormode').setAttribute( "onClick", "javascript: darkmode();" );
           document.body.style.backgroundColor = "white";
       }
     </script>
