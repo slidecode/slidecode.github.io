@@ -25,7 +25,7 @@
         border-color: #fff8ee;
         border-style: hidden hidden hidden solid;
         padding: 8px 10px;
-        background-color: #453622;
+        background-color: #170d00;
       }
     </style>
     <script>
@@ -34,6 +34,7 @@
           document.getElementById('main').style.backgroundColor='#170d00'
           document.getElementById('main').style.color='#fff8ee'
           document.getElementById('main').style.borderColor='#fff8ee'
+          document.getElementById('colormode').onClick='lightmode()'
           document.body.style.backgroundColor = "black";
       }
       function lightmode() {
@@ -41,15 +42,8 @@
           document.getElementById('main').style.backgroundColor='#ddddff'
           document.getElementById('main').style.color='#000011'
           document.getElementById('main').style.borderColor='#000011'
+          document.getElementById('colormode').onClick='darkmode()'
           document.body.style.backgroundColor = "white";
-      }
-      function colormode() {
-          if (colormode = 1) {
-            lightmode()
-          }
-          else (colormode = 0) {
-            darkmode() 
-          }
       }
     </script>
   </head>
@@ -58,6 +52,6 @@
     <div class="Main" id="main">
       <h1>Science Stuffs</h1>
       <h2>Geology</h2>
-      <button type="button" onclick="colormode()">Color Mode</button>
+      <button type="button" onclick="lightmode()" id="colormode">Color Mode</button>
     </div>
   </body>
