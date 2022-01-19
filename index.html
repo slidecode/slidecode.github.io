@@ -30,16 +30,26 @@
     </style>
     <script>
       function darkmode() {
+          var colormode = 1;
           document.getElementById('main').style.backgroundColor='#170d00'
           document.getElementById('main').style.color='#fff8ee'
           document.getElementById('main').style.borderColor='#fff8ee'
           document.body.style.backgroundColor = "black";
       }
       function lightmode() {
+          var colormode = 0;
           document.getElementById('main').style.backgroundColor='#ddddff'
           document.getElementById('main').style.color='#000011'
           document.getElementById('main').style.borderColor='#000011'
           document.body.style.backgroundColor = "white";
+      }
+      function colormode() {
+          if (colormode = 1) {
+            lightmode()
+          }
+          else (colormode = 0) {
+            darkmode() 
+          }
       }
     </script>
   </head>
@@ -48,6 +58,6 @@
     <div class="Main" id="main">
       <h1>Science Stuffs</h1>
       <h2>Geology</h2>
-      <button type="button" onclick="lightmode()">Color Mode</button>
+      <button type="button" onclick="colormode()">Color Mode</button>
     </div>
   </body>
