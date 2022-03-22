@@ -50,6 +50,7 @@
           document.getElementById('colormode').style.color= '#000011'
           document.getElementById('colormode').style.backgroundColor='#ddddff'
           document.getElementById('colormode').setAttribute( "onClick", "javascript: lightmode();" );
+          document.getElementById('clrmodeimg').src="https://u.cubeupload.com/aaa2/StudioProject.jpeg"
           document.body.style.backgroundColor = "black";
       }
       function lightmode() {
@@ -60,15 +61,16 @@
           document.getElementById('colormode').setAttribute( "onClick", "javascript: darkmode();" );
           document.getElementById('colormode').style.color= '#fff8ee'
           document.getElementById('colormode').style.backgroundColor='#170d00'
+          document.getELementById('clrmodeimg').src="https://u.cubeupload.com/aaa2/StudioProject1.jpeg"
           document.body.style.backgroundColor = "white";
       }
     </script>
   </head>
   <body>
-    <div class="header"></div>
+    <div class="header"><button type="button" onclick="lightmode()" id="colormode" class="button"><img id="clrmodeimg" src="https://u.cubeupload.com/aaa2/StudioProject.jpeg"><></button></div>
     <div class="Main" id="main">
-      <h1>Science Stuffs</h1>
-      <h2>Geology</h2>
-      <button type="button" onclick="lightmode()" id="colormode" class="button">Color Mode</button>
+      <h1>Slide</h1>
+      <h2>Links</h2>
+      
     </div>
   </body>
