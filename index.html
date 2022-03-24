@@ -29,6 +29,21 @@
         background-color: #170d00;
         border-radius: 8px;
       }
+      
+      .images {
+        color: #fff8ee;
+        text-align: center;
+        font-family: 'Righteous', cursive;
+        width: 20%;
+        margin-left: 750px;
+        border: 10px;
+        border-color: #fff8ee;
+        border-style: hidden hidden hidden solid;
+        padding: 8px 10px;
+        background-color: #170d00;
+        border-radius: 8px;  
+      }
+      
       .button {
         background-color: #4CAF50; /* Green */
         border: none;
@@ -49,25 +64,33 @@
     <script>
       function darkmode() {
           var colormode = 1;
-          document.getElementById('main').style.backgroundColor='#170d00'
-          document.getElementById('main').style.color='#fff8ee'
-          document.getElementById('main').style.borderColor='#fff8ee'
-          document.getElementById('colormode').style.color= '#000011'
-          document.getElementById('colormode').style.backgroundColor='#ddddff'
+          document.getElementById('main').style.backgroundColor='#170d00';
+          document.getElementById('main').style.color='#fff8ee';
+          document.getElementById('main').style.borderColor='#fff8ee';
+          document.getElementById('colormode').style.color= '#000011';
+          document.getElementById('colormode').style.backgroundColor='#ddddff';
+          document.getElementById('button').style.color= '#000011';
+          document.getElementById('button').style.backgroundColor='#ddddff';
           document.getElementById('colormode').setAttribute( "onClick", "javascript: lightmode();" );
-          document.getElementById('clrmodeimg').src="https://u.cubeupload.com/aaa2/StudioProject.jpeg";
+          document.getElementById('clrmodeimg').setAttribute( "src", "https://u.cubeupload.com/aaa2/StudioProject.jpeg");
           document.body.style.backgroundColor = "black";
       }
       function lightmode() {
           var colormode = 0;
-          document.getElementById('main').style.backgroundColor='#ddddff'
-          document.getElementById('main').style.color='#000011'
-          document.getElementById('main').style.borderColor='#000011'
+          document.getElementById('main').style.backgroundColor='#ddddff';
+          document.getElementById('main').style.color='#000011';
+          document.getElementById('main').style.borderColor='#000011';
           document.getElementById('colormode').setAttribute( "onClick", "javascript: darkmode();" );
-          document.getElementById('colormode').style.color= '#fff8ee'
-          document.getElementById('colormode').style.backgroundColor='#170d00'
-          document.getELementById('clrmodeimg').src="https://u.cubeupload.com/aaa2/StudioProject1.jpeg";
+          document.getElementById('colormode').style.color= '#fff8ee';
+          document.getElementById('colormode').style.backgroundColor='#170d00';
+          document.getElementById('button').style.color= '#fff8ee';
+          document.getElementById('button').style.backgroundColor='#170d00';
+          document.getELementById('clrmodeimg').setAttribute( "src", "https://u.cubeupload.com/aaa2/StudioProject1.jpeg");
           document.body.style.backgroundColor = "white";
+      }
+      function getRndInt(min, max) {
+        var randInt = Math.floor(Math.random() * (max - min) ) + min;
+        document.getElementById("rndIntTXT").innnerHTML = randInt;
       }
     </script>
   </head>
@@ -77,6 +100,17 @@
     <div class="Main" id="main">
       <h1>Slide</h1>
       <h2>Links</h2>
+      <a href="https://scratch.mit.edu/users/EmeraldCreeper789Dev/">Scratch</a>
+      <a href="https://github.com/slidecode">GitHub</a>
+      <h2>About</h2>
+      <p>I'm a proffesional idiot.</p><br>
+      <button onclick="getRndInt(0, 101)" class="button">Get a random number.</button>
+      <p id="rndIntTXT"></p>
+      <p>Got experience in BATCH, HTML, CSS, and JavaScript.</p>
+      <div class="images">
+        <img src="https://cdn2.scratch.mit.edu/get_image/user/73903926_60x60.png" alt="Scratch Profile Picture">Scratch Profile Picture</img>
+      </div>
+      <h2>Art</h2>
       
     </div>
   </body>
