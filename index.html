@@ -48,7 +48,7 @@
         background-color: #FF0000;
         width: 1px;
         height: 1px;
-        position:fixed; left:80px; top:20px;
+        position:fixed; left:80px; top:180px;
       }
       
       .button {
@@ -69,19 +69,7 @@
       }
     </style>
     <script>
-      function darkmode() {
-          var colormode = 1;
-          document.getElementById('main').style.backgroundColor='#170d00';
-          document.getElementById('main').style.color='#fff8ee';
-          document.getElementById('main').style.borderColor='#fff8ee';
-          document.getElementById('colormode').style.color= '#000011';
-          document.getElementById('colormode').style.backgroundColor='#ddddff';
-          document.getElementById('colormode').setAttribute( "onClick", "javascript: lightmode();" );
-          document.getElementById('clrmodeimg').setAttribute( "src", "https://u.cubeupload.com/aaa2/StudioProject.jpeg");
-          document.body.style.backgroundColor = "black";
-      }
       function lightmode() {
-          var colormode = 0;
           document.getElementById('main').style.backgroundColor='#ddddff';
           document.getElementById('main').style.color='#000011';
           document.getElementById('main').style.borderColor='#000011';
@@ -91,10 +79,17 @@
           document.getELementById('clrmodeimg').setAttribute( "src", "https://u.cubeupload.com/aaa2/StudioProject1.jpeg");
           document.body.style.backgroundColor = "white";
       }
-      function getRndInt(min, max) {
-        var randInt = return Math.floor(Math.random() * (max - min) ) + min;
-        document.getElementById("rndIntTXT").innnerHTML = randInt;
+      function darkmode() {
+          document.getElementById('main').style.backgroundColor='#170d00';
+          document.getElementById('main').style.color='#fff8ee';
+          document.getElementById('main').style.borderColor='#fff8ee';
+          document.getElementById('colormode').style.color= '#000011';
+          document.getElementById('colormode').style.backgroundColor='#ddddff';
+          document.getElementById('colormode').setAttribute( "onClick", "javascript: lightmode();" );
+          document.getElementById('clrmodeimg').setAttribute( "src", "https://u.cubeupload.com/aaa2/StudioProject.jpeg");
+          document.body.style.backgroundColor = "black";
       }
+
     </script>
   </head>
   <body>
